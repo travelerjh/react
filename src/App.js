@@ -1,22 +1,13 @@
 function App() {
-  // jsx 가 js  코드로 변환됨
-  // 따라서 js 키워드를 사용할수 없다 .
+  const age = 31;
 
   return (
     <>
-      {/* class 속성은 classNaeme 으로 작성*/}
-      <div className="header"> Lorem ipsum dolor.</div>
-      <div className="error"> Lorem ipsum dolor.</div>
-      <div>
-        <label htmlFor="nameInput"> 이름</label>
-        <input type="text" id="nameInput" />
-      </div>
-
-      {/*    */}
-      <div className={}></div>
-
-
-
+      <h1> 나이는 {age}</h1>
+      <h1> 나이는 {31}</h1>
+      {/* 큰차이 없다 */}
+      <div className={"jh"}>rsadf</div>
+      <div className="ia">rsadf</div>
     </>
   );
 }
