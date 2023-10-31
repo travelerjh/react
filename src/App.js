@@ -2,12 +2,10 @@ function App() {
   return (
     <div>
       <h1> hello </h1>
-      <My/>
-
+      <My />
     </div>
   );
 }
-
 
 // 브라우저가 기본으로 제공하는 컴포넌트는  소문자로 시작  ex>  div , h1 --> built-in component
 // 우리가 직접 만드는 컴포넌트는 대문자로 시작   <My>
@@ -16,19 +14,20 @@ function App() {
 // 항상그런건 아니지만  return 값은  보통 JSX 코드다
 // return 값이 여러줄이면 () 감싸기
 
-function My(){
-    // return 문에 jsx 코드 작성 가능
-    // 꼭 하나의 root tag 가 존재해야 한다. 두개의 테그는 안된다.
-    // root tag 가 필요 없다면  fragment 사용 가능   ex )   -->     <>    </>
+function My() {
+  // return 문에 jsx 코드 작성 가능
+  // 꼭 하나의 root tag 가 존재해야 한다. 두개의 테그는 안된다.
+  // root tag 가 필요 없다면  fragment 사용 가능   ex )   -->     <>    </>
 
-    // jsx 주석 사용법 {/*  */}
-
-    return(
-              <div>
-                  <h1> hi com</h1>
-                  <h3> bye com </h3>
-              </div>
-             )
+  // jsx 주석 사용법 {/*  */}
+  // jsx 에서 태그 사용시 꼭 종료 태그를 작성해야함
+  // 비어 있는 요소이면 시작태그에서 종료
+  return (
+    <div>
+      <h1> hi com</h1>
+      <h3> bye com </h3>
+    </div>
+  );
 }
 
 export default App;
