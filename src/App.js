@@ -11,6 +11,12 @@ function App() {
         <label htmlFor="nameInput"> 이름</label>
         <input type="text" id="nameInput" />
       </div>
+
+      {/*    */}
+      <div className={}></div>
+
+
+
     </>
   );
 }
