@@ -1,13 +1,20 @@
 function App() {
-  const age = 31;
+  const num1 = Math.ceil(Math.random() * 6);
+  const num2 = Math.ceil(Math.random() * 6);
+
+  let messageClassName = "lose";
+  let message = "다시던저보세요";
+
+  if (num1 === num2) {
+    messageClassName = "win";
+    message = "당첨";
+  }
 
   return (
     <>
-      <h1> 나이는 {age}</h1>
-      <h1> 나이는 {31}</h1>
-      {/* 큰차이 없다 */}
-      <div className={"jh"}>rsadf</div>
-      <div className="ia">rsadf</div>
+      <h1> 1번주사의 번호는 {num1}</h1>
+      <h1> 2번주사의 번호는 {num2}</h1>
+      <h1 className={messageClassName}> {message}</h1>
     </>
   );
 }
