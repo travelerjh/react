@@ -2,6 +2,7 @@
 
 import MyBox from "./component/MyBox";
 import { MyElem } from "./component/MyElem";
+import { MyContaoner } from "./component/MyContaoner";
 
 function App() {
   const mystyle = {};
@@ -9,6 +10,7 @@ function App() {
     <>
       <MyBox />
       <MyElem />
+      <MyContaoner />
       <div></div>
     </>
   );
