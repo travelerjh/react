@@ -1,11 +1,14 @@
-import { MyComp } from "./component/MyComp";
+import { MyBox, MyCon, MyElem, name } from "./component/MyBox";
 
 function App() {
   const mystyle = {};
   return (
     <>
       <div>
-        <MyComp />
+        <MyBox />
+        <MyElem />
+        <MyCon />
+        <div> {name}</div>
       </div>
     </>
   );
