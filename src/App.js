@@ -1,22 +1,32 @@
 function App() {
-  const mystyle = {
-    color: "blue",
-    background: "gold", // black-ground 안됨   카멜 케이스로 backGround
-    fontSize: "30px",
-    textAlign: "center",
-  }; // js object
-
+  const mystyle = {};
   return (
     <>
-      <div style={mystyle}> Lorem ipsum dolor.</div>
-      {/*  {{ }} 이렇게 쓰는 이유는 자바스크립트쓰고  인라인스타일쓰려고  */}
-      <div
-        style={{ color: "red", backgroundColor: "skyblue", fontSize: "30px" }}
-      >
-        {" "}
-        Lorem ipsum dolor.
+      <div>
+        <h1
+          className={"note"}
+          style={{ backgroundColor: "blue", color: "white" }}
+        >
+          lrom
+        </h1>
+        <p title={"문단 요소"}>lreom</p>
+        <Mycom tilte="내컴포넌트" name="흥민" />
+        <Mycom tilte="I am 컴포넌트에요" name="강인" />
       </div>
     </>
+  );
+}
+
+// 함수 인자로
+// 사용한 곳에서 넘긴 property 들이 객채로 담김
+// 예 title ="내컴포넌트"  => {title:"내컴포넌트"}
+
+function Mycom(props) {
+  console.log("Mycom 이 받은 property", props);
+  return (
+    <div>
+      <h1 title={props.tilte}> Hello {props.name}</h1>
+    </div>
   );
 }
 
