@@ -3,15 +3,8 @@ function App() {
   return (
     <>
       <div>
-        <h1
-          className={"note"}
-          style={{ backgroundColor: "blue", color: "white" }}
-        >
-          lrom
-        </h1>
-        <p title={"문단 요소"}>lreom</p>
-        <Mycom tilte="내컴포넌트" name="흥민" />
-        <Mycom tilte="I am 컴포넌트에요" name="강인" />
+        <MyComp value="흥민" address="신촌" />
+        <MyComp value="강인" address="강남" />
       </div>
     </>
   );
@@ -21,11 +14,12 @@ function App() {
 // 사용한 곳에서 넘긴 property 들이 객채로 담김
 // 예 title ="내컴포넌트"  => {title:"내컴포넌트"}
 
-function Mycom(props) {
-  console.log("Mycom 이 받은 property", props);
+function MyComp({ value, address }) {
   return (
     <div>
-      <h1 title={props.tilte}> Hello {props.name}</h1>
+      <h1>
+        이름 ={value} 사는곳 ={address}
+      </h1>
     </div>
   );
 }
