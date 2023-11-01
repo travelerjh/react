@@ -1,6 +1,6 @@
 export default function MyBox() {
   return (
-    <div>
+    <div style={{ color: "gold", backgroundColor: "blue" }}>
       <h1>this is my box</h1>
     </div>
   );

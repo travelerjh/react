@@ -1,17 +1,15 @@
-import MyBox, { city, country, address } from "./component/MyBox";
-import MyElem, { address as myAddress, email } from "./component/MyElem";
+//chakraui css library
 
-//as 로 export 값을 import 할때 별칭을 줄수 있음
+import MyBox from "./component/MyBox";
+import { MyElem } from "./component/MyElem";
 
 function App() {
   const mystyle = {};
   return (
     <>
-      <div>
-        <h1>{myAddress}</h1>
-        <MyBox />
-        <h1>{address}</h1>
-      </div>
+      <MyBox />
+      <MyElem />
+      <div></div>
     </>
   );
 }
