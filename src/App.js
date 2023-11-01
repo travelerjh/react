@@ -3,8 +3,8 @@ function App() {
   return (
     <>
       <div>
-        <MyComp value="흥민" address="신촌" />
-        <MyComp value="강인" address="강남" />
+        <MyComp name="흥민" age={30} city="신촌" address="서울" />
+        <MyComp name="흥민" city="신촌" address="서울" />
       </div>
     </>
   );
@@ -14,12 +14,10 @@ function App() {
 // 사용한 곳에서 넘긴 property 들이 객채로 담김
 // 예 title ="내컴포넌트"  => {title:"내컴포넌트"}
 
-function MyComp({ value, address }) {
+function MyComp({ name, address, city, age = 100 }) {
   return (
     <div>
-      <h1>
-        이름 ={value} 사는곳 ={address}
-      </h1>
+      {name} 은 {age}세 이고 {address},{city}에 산다.
     </div>
   );
 }
