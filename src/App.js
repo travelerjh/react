@@ -1,14 +1,20 @@
-import { MyBox, MyCon, MyElem, name } from "./component/MyBox";
+import age, { address, MyElem } from "./component/MyElem";
+import MyBox, { person } from "./component/MyBox";
 
 function App() {
   const mystyle = {};
   return (
     <>
       <div>
+        <h1> {address}</h1>
+        <h1> {MyElem}</h1>
+        <h1>
+          {" "}
+          {age}
+          {person.age},{person.name}
+        </h1>
+
         <MyBox />
-        <MyElem />
-        <MyCon />
-        <div> {name}</div>
       </div>
     </>
   );
