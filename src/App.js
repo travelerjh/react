@@ -1,27 +1,19 @@
-import age, { address, MyElem } from "./component/MyElem";
-import MyBox, { person } from "./component/MyBox";
+import MyBox, { city, country, address } from "./component/MyBox";
+import MyElem, { address as myAddress, email } from "./component/MyElem";
+
+//as 로 export 값을 import 할때 별칭을 줄수 있음
 
 function App() {
   const mystyle = {};
   return (
     <>
       <div>
-        <h1> {address}</h1>
-        <h1> {MyElem}</h1>
-        <h1>
-          {" "}
-          {age}
-          {person.age},{person.name}
-        </h1>
-
+        <h1>{myAddress}</h1>
         <MyBox />
+        <h1>{address}</h1>
       </div>
     </>
   );
 }
-
-// 함수 인자로
-// 사용한 곳에서 넘긴 property 들이 객채로 담김
-// 예 title ="내컴포넌트"  => {title:"내컴포넌트"}
 
 export default App;
